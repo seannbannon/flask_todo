@@ -17,17 +17,19 @@
             <th>Added</th>
             <th>Actions</th>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td>
-            <center>
-                <a href="">Delete-o</a>
-                <br>
-                <a href="">Update</a>
-            </center>
-            </td>
-        </tr>
+        {% for task in tasks %}
+            <tr>
+                <td>{{ task.content }}</td>
+                <td>{{ task.date.created.date() }}</td>
+                <td>
+                <center>
+                    <a href="">Delete-o</a>
+                    <br>
+                    <a href="">Update</a>
+                </center>
+                </td>
+            </tr>
+        {% endfor %}
     </table>
 </center>
 

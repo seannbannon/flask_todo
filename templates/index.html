@@ -11,7 +11,7 @@
     <h1>Task Master</h1>
 
 <!-- create table -->
-    <table  border=1 frame=box rules=all style="width:70%">
+    <table>
         <tr>
             <th>Task</th>
             <th>Added</th>
@@ -22,16 +22,13 @@
                 <td>{{ task.content }}</td>
                 <td>{{ task.date_created.date() }}</td>
                 <td>
-                <center>
                     <a href="/delete/{{task.id}}">Delete-o</a>
                     <br>
                     <a href="">Update</a>
-                </center>
                 </td>
             </tr>
         {% endfor %}
     </table>
-</center>
 
     <form action="/" method="POST">
         <input type = "text" name = "content" id="content">
